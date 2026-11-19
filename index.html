@@ -43,6 +43,10 @@
   .num{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
     font:800 22px "Bricolage Grotesque",sans-serif;color:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
   h2{font-family:"Bricolage Grotesque",sans-serif;font-size:32px;margin:0;letter-spacing:-.01em}
+  .num.wide{width:auto;min-width:46px;padding:0 10px}
+  .sec-sub{margin:2px 0 0;color:var(--muted);font-size:15px;font-style:italic}
+  .glossary{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+  .glossary span{font-size:14px;background:var(--paper);border:1.5px solid var(--ink);border-radius:999px;padding:5px 12px}
   .card{background:var(--paper);border:2px solid var(--ink);border-radius:var(--radius);box-shadow:5px 5px 0 var(--ink);padding:24px}
 
   ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
@@ -129,7 +133,8 @@
 <nav>
   <div class="wrap">
     <a href="#login">1 · Log in</a>
-    <a href="#filament">2 · Change filament</a>
+    <a href="#filament">2A · Change filament color</a>
+    <a href="#empty-spool">2B · Load an empty spool</a>
     <a href="#print">3 · Print</a>
     <a href="#etiquette">4 · Lounge etiquette</a>
   </div>
@@ -174,7 +179,8 @@
 
   <!-- FILAMENT -->
   <section id="filament">
-    <div class="sec-head"><div class="num" style="background:var(--orange)">2</div><h2>Changing filament</h2></div>
+    <div class="sec-head"><div class="num wide" style="background:var(--orange)">2A</div><div><h2>Changing filament color</h2><p class="sec-sub">When filament is already on the spool</p></div></div>
+    <div class="glossary"><span><b>Filament</b> = the colored plastic wire</span><span><b>Spool</b> = the gray wheel it's wound on</span></div>
     <a class="video" href="https://www.youtube.com/watch?v=go5LY8e0E-c" target="_blank" rel="noopener">
       <span class="play"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 2l10 6-10 6z" fill="#fff"/></svg></span>
       <span><b>Watch the instruction video</b><small>Opens on YouTube</small></span>
@@ -197,6 +203,34 @@
         <li>
           <div class="step-title">Let it calibrate</div>
           <div class="muted">The machine auto-calibrates the new filament. No action needed.</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- EMPTY SPOOL -->
+  <section id="empty-spool">
+    <div class="sec-head"><div class="num wide" style="background:var(--orange)">2B</div><div><h2>Loading new filament color into an empty spool</h2></div></div>
+    <div class="card">
+      <ol class="steps">
+        <li>
+          <div class="step-title">Grab an empty spool and your plastic filament</div>
+        </li>
+        <li>
+          <div class="step-title">Open the empty spool</div>
+          <div class="muted">Untwist the spool to open it into 2 halves.</div>
+        </li>
+        <li>
+          <div class="step-title">Line up the notches</div>
+          <div class="muted">The inside of the filament has a notch in the cardboard. Match that notch to the plastic notch on one of the spool halves. Once the notches are aligned, the filament should be secure in place.</div>
+        </li>
+        <li>
+          <div class="step-title">Close the spool</div>
+          <div class="muted">Place the other half of the spool on top and twist until you hear an audible <b>&ldquo;CLICK&rdquo;</b>.</div>
+        </li>
+        <li>
+          <div class="step-title">Load it into the machine</div>
+          <div class="muted">You can now load the spooled filament into the machine for use. Follow the steps in <a href="#filament">2A</a>.</div>
         </li>
       </ol>
     </div>
